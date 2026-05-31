@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+    <header>
+        <h1>Staff Dashboard</h1>
+    </header>
+    <main>
+        <div class="login-container" style="max-width: 600px;">
+            <h2>Welcome to the Secure Portal</h2>
+            <p><strong>Status:</strong> All systems operational ✅</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            <h3>Internal Announcements</h3>
+            <ul>
+                <li>Staff meeting this Friday at 10:00 AM.</li>
+                <li>Please submit your weekly timesheets by Thursday evening.</li>
+                <li>New security updates will roll out over the weekend.</li>
+            </ul>
+            <br>
+            <button onclick="logout()">Log Out</button>
+        </div>
+        <p class="footer-text">Made by jacksonmiller01</p>
+    </main>
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
