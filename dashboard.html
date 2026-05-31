@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Dashboard</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
     <header>
         <h1>Staff Dashboard</h1>
     </header>
     <main>
-        <div class="login-container" style="max-width: 600px;">
+        <div class="login-container" style="max-width: 550px;">
             <h2>Welcome to the Secure Portal</h2>
             <p><strong>Status:</strong> All systems operational ✅</p>
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            
+            <hr>
+            
             <h3>Internal Announcements</h3>
             <ul>
                 <li>Staff meeting this Friday at 10:00 AM.</li>
                 <li>Please submit your weekly timesheets by Thursday evening.</li>
                 <li>New security updates will roll out over the weekend.</li>
             </ul>
+            
+            <hr>
+
+            <h3>Quick Links & Tools</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>📅 <a href="#" onclick="alert('Opening Shift Schedule...')">View Shift Schedule</a></li>
+                <li>📁 <a href="#" onclick="alert('Opening HR Documents...')">Employee Handbook & HR Forms</a></li>
+                <li>🎟️ <a href="#" onclick="alert('Opening IT Support...')">Submit an IT Support Ticket</a></li>
+            </ul>
+
             <br>
             <button onclick="logout()">Log Out</button>
         </div>
