@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Portal</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
     <header>
@@ -29,10 +29,19 @@
     </main>
     <script>
         function handleLogin(event) {
-            event.preventDefault(); // Stops the page from reloading
+            event.preventDefault(); 
+            
             const user = document.getElementById("username").value;
-            alert("Welcome back, " + user + "! Redirecting to the secure dashboard...");
+            const pass = document.getElementById("password").value;
+
+            // Set your secret credentials here
+            if (user === "admin" && pass === "password123") {
+                window.location.href = "dashboard.html"; // Send to dashboard
+            } else {
+                alert("Incorrect username or password. Please try again.");
+            }
         }
     </script>
 </body>
 </html>
+
