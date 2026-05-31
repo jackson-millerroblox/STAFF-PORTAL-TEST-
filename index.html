@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Portal</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
     <header>
-        <h1>Staff Portal</h1>
+        <h1>⚡ Shift Portal</h1>
     </header>
     <main>
         <div class="login-container">
             <h2>Staff Login</h2>
+            <p class="subtitle-text">Enter credentials to access secure systems.</p>
             <form onsubmit="handleLogin(event)">
                 <div class="input-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" required placeholder="Enter your username">
+                    <input type="text" id="username" required placeholder="e.g. admin">
                 </div>
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" required placeholder="Enter your password">
+                    <input type="password" id="password" required placeholder="••••••••">
                 </div>
                 <button type="submit">Log In</button>
             </form>
@@ -30,13 +31,11 @@
     <script>
         function handleLogin(event) {
             event.preventDefault(); 
-            
             const user = document.getElementById("username").value;
             const pass = document.getElementById("password").value;
 
-            // Set your secret credentials here
             if (user === "admin" && pass === "password123") {
-                window.location.href = "dashboard.html"; // Send to dashboard
+                window.location.href = "dashboard.html";
             } else {
                 alert("Incorrect username or password. Please try again.");
             }
@@ -44,4 +43,3 @@
     </script>
 </body>
 </html>
-
