@@ -3,40 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Dashboard</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <title>Enterprise Operations Dashboard</title>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
-    <header>
-        <h1>⚡ Shift Portal</h1>
-    </header>
-    <main>
-        <div class="login-container" style="max-width: 550px;">
-            <h2>Secure Dashboard</h2>
-            <p class="subtitle-text">Status: All systems operational ✅</p>
-            
-            <hr>
-            
-            <h3 style="color: #ffffff; font-size: 16px;">Internal Announcements</h3>
-            <ul>
-                <li>📢 Staff meeting this Friday at 10:00 AM.</li>
-                <li>📝 Please submit your weekly timesheets by Thursday evening.</li>
-                <li>🛡️ New security updates will roll out over the weekend.</li>
-            </ul>
-            
-            <hr>
-
-            <h3 style="color: #ffffff; font-size: 16px;">Quick Links & Tools</h3>
-            <ul style="margin-bottom: 30px;">
-                <li>📅 <a href="#" onclick="alert('Opening Shift Schedule...')">View Shift Schedule</a></li>
-                <li>📁 <a href="#" onclick="alert('Opening HR Documents...')">Employee Handbook & HR Forms</a></li>
-                <li>🎟️ <a href="#" onclick="alert('Opening IT Support...')">Submit an IT Support Ticket</a></li>
-            </ul>
-
-            <button onclick="logout()">Log Out</button>
+    <!-- Permanent Navigation Left Sidebar -->
+    <div class="sidebar">
+        <div class="logo-section">⚡ Staff Gateway</div>
+        <ul class="nav-links">
+            <li class="active"><a href="#">📊 Core Terminal</a></li>
+            <li><a href="#" onclick="alert('Module loading...')">📅 Master Roster</a></li>
+            <li><a href="#" onclick="alert('Accessing secure records...')">📁 Base Directories</a></li>
+            <li><a href="#" onclick="alert('Opening support routing...')">🎟️ Helpdesk Desk</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button class="btn-logout" onclick="logout()">Disconnect Terminal</button>
         </div>
-        <p class="footer-text">Made by jacksonmiller01</p>
-    </main>
+    </div>
+
+    <!-- Main Workspace Frame -->
+    <div class="content-area">
+        <div class="top-nav">
+            <h2>Operations Command Panel</h2>
+            <div style="font-size: 14px; color: #94a3b8;">Welcome Back, <strong>Admin User</strong></div>
+        </div>
+        
+        <main>
+            <!-- Top Dashboard Section: Announcements -->
+            <div class="panel-card">
+                <h3>Global Operations Briefings</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="background: rgba(255,255,255,0.02); padding: 14px; border-radius: 8px; border-left: 4px solid #38bdf8;">
+                        <strong style="color: #38bdf8;">All-Hands Briefing:</strong> Assembly scheduled this Friday morning at exactly 10:00 AM UTC. Attendance logged.
+                    </div>
+                    <div style="background: rgba(255,255,255,0.02); padding: 14px; border-radius: 8px; border-left: 4px solid #38bdf8;">
+                        <strong style="color: #38bdf8;">Administration Audit:</strong> Please ensure all active project timesheet matrix entries are filed before Thursday night close.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Dashboard Section: Wide Data Matrix Table -->
+            <div class="panel-card">
+                <h3>System Infrastructure Roster</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Assignee Node</th>
+                            <th>Operational Area</th>
+                            <th>Node Assignment Matrix</th>
+                            <th>Network Health</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jackson Miller</td>
+                            <td>System Development</td>
+                            <td>Primary Infrastructure Core</td>
+                            <td><span class="status-badge">Operational</span></td>
+                        </tr>
+                        <tr>
+                            <td>Terminal Hub Alpha</td>
+                            <td>Security Auditing</td>
+                            <td>Failover Gateway Routing</td>
+                            <td><span class="status-badge">Operational</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cloudflare Edge Net</td>
+                            <td>Asset Delivery</td>
+                            <td>Static Distribution Network</td>
+                            <td><span class="status-badge">Operational</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p style="color: #64748b; font-size: 13px;">Systems managed under license by jacksonmiller01</p>
+        </main>
+    </div>
+
     <script>
         function logout() {
             window.location.href = "index.html";
