@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Portal</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <title>Staff Gateway</title>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
-    <header>
-        <h1> Staff Portal </h1>
-    </header>
-    <main>
-        <div class="login-container">
-            <h2>Staff Login</h2>
-            <p class="subtitle-text">Enter credentials to access secure systems.</p>
-            <form onsubmit="handleLogin(event)">
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" required placeholder="e.g. admin">
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" required placeholder="••••••••">
-                </div>
-                <button type="submit">Log In</button>
-            </form>
+    <div class="sidebar">
+        <div class="logo-section">⚡ Staff Gateway</div>
+        <p style="color: #64748b; font-size: 13px; line-height: 1.6;">Secure enterprise sign-in terminal infrastructure.</p>
+    </div>
+    
+    <div class="content-area">
+        <div class="top-nav">
+            <h2>System Status: Active</h2>
         </div>
-        <p class="footer-text">Made by jacksonmiller01</p>
-    </main>
+        <main>
+            <div class="panel-card" style="max-width: 450px;">
+                <h3>Account Authentication</h3>
+                <form onsubmit="handleLogin(event)">
+                    <label style="display:block; margin-bottom:8px; font-size:13px; color:#cbd5e1;">Username ID</label>
+                    <input type="text" id="username" class="input-field" required placeholder="e.g. admin">
+                    
+                    <label style="display:block; margin-bottom:8px; font-size:13px; color:#cbd5e1;">Secure Password</label>
+                    <input type="password" id="password" class="input-field" required placeholder="••••••••">
+                    
+                    <div style="margin-top: 10px;">
+                        <button type="submit" class="btn-primary">Authenticate Gateway</button>
+                    </div>
+                </form>
+            </div>
+            <p style="color: #64748b; font-size: 13px;">Made by jacksonmiller01</p>
+        </main>
+    </div>
+
     <script>
         function handleLogin(event) {
             event.preventDefault(); 
@@ -37,7 +44,7 @@
             if (user === "admin" && pass === "password123") {
                 window.location.href = "dashboard.html";
             } else {
-                alert("Incorrect username or password. Please try again.");
+                alert("Invalid terminal access credentials.");
             }
         }
     </script>
